@@ -1,0 +1,86 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <title>DAV</title>
+  </head>
+  <body>
+    <nav class = "navbar navbar-expand-lg navbar-dark bg-primary">
+      <a class = "navbar-brand" href = "/">
+        <img src = "{% static 'img/star.png' %}" width="30" height="30" alt="list_icon" />
+      </a>
+          <a class = "navbar-brand" href="#">DAV Authentications</a>
+          <button class = "navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class = "navbar-toggler-icon"></span>
+          </button>
+        
+          <div class = "collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class = "navbar-nav ml-auto">
+              <li class = "nav-item active">
+                <a class = "nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="/about/aboutus/">About<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                  <a class="nav-link" href="/about/contactus/">Contact-Us<span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+          <form class="form-inline my-2 my-lg-0">
+              <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+              <a button class="btn btn-danger my-2 my-sm-0" style="margin: 10px" href="/login/login_page"> Login </a> </button>
+              <a button class="btn btn-danger my-2 my-sm-0" type="submit" href="/register">Register</a></button>
+            </form>
+        </nav>
+        <div style="height:81.5vh ">
+          <div class="col-sm d-flex justify-content-center align-items-center" style="height: 80vh;"> 
+              <form method="POST" action="/verify/"> {%csrf_token%}
+                {%if message is not '' and message is not None%} 
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <strong>Error</strong> {{message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {%endif%}
+                <div class="card p-4 shadow-lg p-3 mb-5 bg-white rounded" style="width:400px;">
+                  <div class="form-group">
+                  <label for="exampleInputEmail1">Key Authentication</label>
+                  <input type="text" name="verify" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your key here...">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your key with anyone else.</small>
+                  </div>
+                  <!-- <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  </div>
+                  <div class="form-group form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Accept terms & conditions</label>
+                  </div> -->
+                  <button type="submit" class="btn btn-primary center rounded-pill">Submit</button>
+                </div>
+              </form>
+            </div>
+        </div>
+        <div class="footer bg-primary" style="height:10vh">
+          <div class="d-flex justify-content-center" style="color: aliceblue; font-family: 'Courier New', Courier, monospace;">
+            <h5><br>copyright &copy; 2019 DAV Authentications</h5>
+          </div>
+        </div>
+    </div>
+  
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,218 @@
+{%load static%}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#hide").click(function () {
+        $("p").hide();
+      });
+      $("#show").click(function () {
+        $("p").show();
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'img/star.png'%}" width="30" height="30" alt="list_icon" />
+    </a>
+    <a class="navbar-brand" href="#">DAV Authentications</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/about/aboutus">About<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/about/contactus">Contact-Us<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/login/logout">Logout<span class="sr-only">(current)</span></a>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <div class="col-sm d-flex justify-content-center align-items-center" style="height: 130vh;">
+
+
+    <form method="POST" action="/college/create_certificate/"> {%csrf_token%}
+
+      <h1 style="color: green; text-align: center"><i>Certificate</i></h1>
+      <div class="card p-4 shadow-lg p-3 mb-5 bg-white rounded" style="width: 500px;">
+
+        <div class="form-group" style="width: 350px">
+          <label for="exampleInputname1">Student Name</label>
+          <input type="text" class="form-control rounded-pill" name="student_name" placeholder="Enter name">
+        </div>
+        <div class="form-group" style="width: 350px">
+          <label>College Name</label>
+          <input type="text" class="form-control" name="college_name" placeholder="Enter College">
+        </div>
+        <div class="form-group">
+          <label>Event<br></label>
+          <select id="sel" name="event" onchange=>
+            <option id="show">competition</option>
+            <option id="hide">workshop</option>
+          </select>
+        </div>
+
+        <div id="com">
+          <div class="form-group">
+            <label>Category</label>
+            <select id="sel1" name="position_category" onchange=>
+              <option id="show">Participation</option>
+              <option id="hide">Secured Rank</option>
+            </select>
+          </div>
+          <div class=form-group id="rank">
+            <label>Rank</label>
+            <input type="number" class="form-control rounded-pill" name="position" placeholder="Enter Rank"
+              style="width: 150px">
+          </div>
+          <script>
+            $(document).ready(function () {
+
+              $('#rank').hide();
+
+              $('#sel1').on('change', () => {
+                $("#rank").toggle();
+              })
+
+            });
+          </script>
+        </div>
+
+
+
+        <!-- <div class="row" id="work">
+                <div class="col-sm">
+                  <label>Duration</label>
+                  <input type="date" style="width: 180px" name="date_from" class="form-control">
+                </div>
+
+                <div class="col-sm" style="margin-top: 40px;">
+                  To
+                </div>
+
+                <div class="col-sm" style="margin-top:31px;">
+                  <input type="date" style="width: 180px;" name="date_to" class="form-control">
+                </div>
+              </div> -->
+
+
+        <script>
+          $(document).ready(function () {
+
+            $('#work').hide();
+
+            $('#sel').on('change', () => {
+              $("#com").toggle();
+              $("#work").toggle();
+            })
+
+          });
+        </script>
+
+        <div class="form-group">
+          <label>Event Name</label>
+          <input type="text" class="form-control" name="event_name" placeholder="Event Name">
+        </div>
+
+        <div class="form-group">
+          <label>About Event</label>
+          <input type="text" class="form-control" name="about_event" placeholder="About Event">
+        </div>
+
+        <div class="form-group">
+          <label>Candidate Email</label>
+          <input type="Email" class="form-control" name="email" placeholder="email">
+        </div>
+
+        <div class="form-group">
+          <label>Certification date</label>
+          <input type="date" id="date" class="form-control" name="certification_date" style="width: 180px;">
+        </div>
+<!-- 
+        <div class="form-group">
+          <label>Have any Unique identification id</label>
+          <select id="sel2" onchange=>
+            <option id="show">No</option>
+            <option id="hide">Yes</option>
+          </select>
+          <div class="form-group" id="yes">
+            <input type="text" class="form-control" name="university_key" placeholder="Collage id">
+          </div>
+          <script>
+            $(document).ready(function () {
+              $('#yes').hide();
+              $('#sel2').on('change', () => {
+
+                $("#yes").toggle();
+              })
+            });
+          </script>
+        </div> -->
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+          <label class="form-check-label" for="exampleCheck1">Accept terms & conditions</label>
+        </div>
+        <button type="submit" class="btn btn-primary center rounded-pill">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="footer bg-primary" style="height:10vh">
+    <div class="d-flex justify-content-center"
+      style="color: aliceblue; font-family: 'Courier New', Courier, monospace;">
+      <h5><br>copyright &copy; 2019 DAV Authentications</h5>
+    </div>
+  </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script>
+    const dateObj = new Date();
+    console.log(new Date(dateObj.getFullYear(), dateObj.getMonth(), dateObj.getDate()));
+
+   
+    var now = new Date();
+
+    var day = ("0" + now.getDate()).slice(-2);
+    var month = ("0" + (now.getMonth() + 1)).slice(-2);
+
+    var today = now.getFullYear() + "-" + (month) + "-" + (day);
+
+    $('#date').val(today);
+  </script>
+</body> 
+</html> 

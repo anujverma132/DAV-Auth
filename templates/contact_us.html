@@ -1,0 +1,138 @@
+<!-- contactus -->
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <title>Contact Us</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'img/star.png'%}" width="30" height="30" alt="list_icon" />
+    </a>
+        <a class="navbar-brand" href="#">DAV Authentications</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              <!-- <a class="btn text-primary" href="/register">Register</a> -->
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/about/aboutus/">About<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/about/contactus/">Contact-Us<span class="sr-only">(current)</span></a>
+            </li>
+          </ul>
+        </div>
+        <form class="form-inline my-2 my-lg-0">
+            <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+           <a button class="btn btn-danger my-2 my-sm-0" style="margin: 10px" href="/login/login_page"> Login </a> </button>
+            <a button class="btn btn-danger my-2 my-sm-0" type="submit" href="/login/register_page">Register</a></button>
+          </form>
+      </nav>
+      <!--main content starts-->
+      <div class="container mt-5 
+      ">
+      <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 ">
+        <h2 class="con-h">Contact Us</h2>
+        <p class="au-mb-4 contact__desc">Say hello using the <a href="#contact-form">contact form </a>below! <br>We're standing by to help.</p>
+        <div class="ben">
+         <div role="form" class="wpcf7" id="wpcf7-f779-o1" lang="en-US" dir="ltr">
+        <div class="screen-reader-response"></div>
+        <form action="/contact-us/#wpcf7-f779-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+        <div style="display: none;">
+        <input type="hidden" name="_wpcf7" value="779">
+        <input type="hidden" name="_wpcf7_version" value="5.0.2">
+        <input type="hidden" name="_wpcf7_locale" value="en_US">
+        <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f779-o1">
+        <input type="hidden" name="_wpcf7_container_post" value="0">
+        <input type="hidden" name="_wpcf7cf_hidden_group_fields" value="[]">
+        <input type="hidden" name="_wpcf7cf_hidden_groups" value="[]">
+        <input type="hidden" name="_wpcf7cf_visible_groups" value="[]">
+        <input type="hidden" name="_wpcf7cf_options" value="{&quot;form_id&quot;:779,&quot;conditions&quot;:[],&quot;settings&quot;:false}">
+        </div>
+        <div class="form-group">
+        <span class="wpcf7-form-control-wrap fname"><input type="text" name="fname" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required con-input" aria-required="true" aria-invalid="false" placeholder="Name*"></span>
+        </div>
+        <div class="form-group">
+        <span class="wpcf7-form-control-wrap email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email con-input" aria-required="true" aria-invalid="false" placeholder="Email*"></span>
+        </div>
+        <div class="form-group">
+        <span class="wpcf7-form-control-wrap tel-109"><input type="tel" name="tel-109" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-required wpcf7-validates-as-tel con-input" aria-required="true" aria-invalid="false" placeholder="Contact Number*"></span>
+        </div>
+        <div class="form-group">
+        <span class="wpcf7-form-control-wrap Message"><textarea name="Message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required con-input" aria-required="true" aria-invalid="false" placeholder="Write Message*"></textarea></span>
+        </div>
+        <div class="form-group">
+        <div class="cap-img">
+        <input type="hidden" name="_wpcf7_captcha_challenge_new-captcha" value="3712824991"><img class="wpcf7-form-control wpcf7-captchac wpcf7-captcha-new-captcha" width="72" height="24" alt="captcha" src="https://www.piet.co.in/wp-content/uploads/wpcf7_captcha/3712824991.png">
+        </div>
+        <div class="cap-txt">
+        <span class="wpcf7-form-control-wrap new-captcha"><input type="text" name="new-captcha" value="" size="40" class="wpcf7-form-control wpcf7-captchar" autocomplete="off" aria-invalid="false" placeholder="Ener Code*"></span>
+        </div>
+        </div>
+        <p><input type="submit" value="Submit" class="wpcf7-form-control wpcf7-submit con-btn"></p>
+        <div class="wpcf7-response-output wpcf7-display-none"></div></form></div>
+        </div>
+        </div>
+
+
+      <div class="mui-col-md-3 mui-col-sm-6 mui-col-xs-6">
+        <p><b>Visit Us at:</b><br> <ul>Website: <a href="http://www.davauthentications.com">www.davauthentications.com</a></ul></p>
+     </div>
+     <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right ">
+        <p><b>For any queries contact us:</b></p>
+        <p class="rk-footer__text rk-footer__by"><li>Theme by <a href="#" class="ae-u-bolder">Deepanjali Dhanuk</a></li></p>
+        <p class="rk-footer__text rk-footer__contact"><ul><span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">deepanjalia399@gmail.com </a></span></ul></p>
+    </div>
+
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+        <p class="rk-footer__text rk-footer__by"><li>Theme by <a href="#" class="ae-u-bolder">Vanshaj Garg</a></li></p>
+        <p class="rk-footer__text rk-footer__contact "><ul><span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">vanshaj.garg26@gmail.com </a></span></ul></p>
+
+    </div>
+
+      <div class="ae-grid__item item-lg-4 au-xs-ta-center au-lg-ta-right">
+        <p class="rk-footer__text rk-footer__by"><li>Theme by <a href="#" class="ae-u-bolder">Anuj Verma</a></li></p>
+        <p class="rk-footer__text rk-footer__contact "><ul><span class="ae-u-bold">Email: </span><span class="ae-u-bolder"> <a href="#0" class="rk-dark-color ">anuj.verma1320@gmail.com </a></span></ul></p>
+     </div>
+   </div>
+      <!--main content ends-->
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous">
+  </script>
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous">
+  </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+</head>
+<body>
+            
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">
+      <img src="{% static 'img/star.png'%}" width="30" height="30" alt="list_icon" />
+    </a>
+        <a class="navbar-brand" href="#">DAV Authentications</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                      <!-- <a class="btn text-primary" href="/register">Register</a> -->
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/about/aboutus/">About<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/about/contactus/">Contact-Us<span class="sr-only">(current)</span></a>
+                    </li>
+                  </ul>
+                </div>
+                <form class="form-inline my-2 my-lg-0">
+                    <!-- <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"> -->
+                   <a button class="btn btn-danger my-2 my-sm-0" style="margin: 10px" href="/login/login_page"> Login </a> </button>
+                    <a button class="btn btn-danger my-2 my-sm-0" type="submit" href="/login/register_page">Register</a></button>
+                  </form>
+              </nav>
+
+    <!--main content starts-->
+
+    <div  class="ae-grid__item--alt item-lg-4  mt-5 col px-md-5" >
+        <h1 class="ae-u-boldest  ">About Us</h1><br>
+            <p class="au-lh-3 "><h4><b>Who are we?</b></h4><br>
+            D.A.V. Authentications is a acronym of <b>Deepanjali, Anuj, Vanshaj</b>, the developers of DAV Authentications.
+            This website is a result of a project given to the trio for finding a solution to the problem of fake
+            certification. The engineers have its expertise in Web Development and programming languages to tackle
+            this issue via this web based solution by the name of DAV Authentications.
+            <br><br>
+            <h4><b>What is DAV Authentications?</b></h4><br>
+            DAV Authentication is a modern web based solution to plagiarism or faking of certifications or
+            documents in a system. Fake certificates and documents running in the corporate or government offices
+            tend to major losses to the companies or to the country as people working in the posts are not
+            qualified enough to perform the task, hence resulting in failures and losses. Plus such cases
+            of fraud lead to law and order crisis in the country.
+            DAV Authentication is a web based solution to the above mentioned problem which used modern technologies
+            to verify the originality of any document via a UUID code (Universal Unique Identity) which is unique
+            to any document and the UUID code can be uplinked to this website, one can verify the originality
+            of the document and also access all the supplementary details relative to the document.
+            Ones a UUID is uploaded to our website, the algorithm of the system will search our database of all
+            existing files and give the user all required details. All the data in the server is well encrypted
+            and all data is safe i.e. only authorized personal will be able to access the data.     
+        </p>
+    </div>
+
+  
+    <!--main content ends-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+
+</body>
+</html>
